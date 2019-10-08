@@ -1,0 +1,81 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+	margin: 0;
+	background-color: #E6E6E6;
+}
+
+.main{
+	margin: 0 auto;
+	margin-top: 10%;
+	width: 30%;
+}
+
+.loginBox{
+	font-family: 'Dosis', sans-serif;
+	margin: 0 auto;
+	width: 80%;
+	height: 500px;
+	background-color: #FFFFFF;
+	border-radius: 10px;
+	text-align: center;
+	color: #000000;	
+}
+
+.loginBox h1{
+	margin-bottom: 40px;
+}
+
+.img-usuario{
+	margin-top: -75px;
+	margin-bottom: 25px;
+	width: 150px;
+	height: 150px;
+}
+
+input[type=text], input[type=password]{
+	font-family: 'Dosis', sans-serif;
+	width: 60%;
+	padding: 15px 20px;
+	background-color: #E6E6E6; 
+	color: #000000;
+	margin-bottom: 20px;
+	border: 0;
+	border-radius: 6px;
+	box-sizing: border-box;
+	font-size: 15px;
+}
+
+input[type=submit]{
+	width: 60%;
+	background-color: #4AADC5;
+	color: #FFFFFF;
+	padding: 15px 20px;
+	margin-left: 0 auto;
+	margin-bottom: 40px;
+	border: none;
+	border-radius: 6px;
+	cursor: pointer;
+}
+
+input[type=submit]:hover{
+	background-color: #58D3F7;
+}
+
+a{
+	text-decoration: none;
+}
+
+a:link {
+  color: #4AADC5;
+}
+
+a:visited {
+  color: #4AADC5;
+}
+
+a:hover {
+  color: #58D3F7;
+}
