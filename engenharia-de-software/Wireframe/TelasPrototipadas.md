@@ -2,9 +2,9 @@
 Protótipos de telas:
 - [ ] Cadastro de cliente
 - [x] Efetuar Login
-- [ ] Abrir chamado
+- [x] Abrir chamado
 - [ ] Ordem de serviço
-- [ ] Escrever mensagem
+- [x] Escrever mensagem
 - [ ] Classificar chamado
 - [ ] Encerrar Chamado
 - [ ] Status do chamado
