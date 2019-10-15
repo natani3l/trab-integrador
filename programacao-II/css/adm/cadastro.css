@@ -91,25 +91,7 @@ div{
 	padding: 50px;
 }
 
-textarea{
-	width: 75%;
-	height: 150px;
-	margin: 0 auto;
-	padding: 12px 20px;
-	border: 2px solid #cccccc;
-	border-radius: 4px;
-	background-color: #f8f8f8;
-	transition: 0.5s;
-	font-size: 16px;
-	resize: none;
-	outline: none;
-	}
-
-input[type=text]:focus, textarea:focus{
-	border: 3px solid #555555;
-}
-
-input[type=text]{
+input[type=text], input[type=password]{
 	width: 75%;
 	padding: 12px 20px;
 	margin: 8px 0;
@@ -130,4 +112,19 @@ input[type=submit]{
 	border: none;
 	border-radius: 6px;
 	cursor: pointer;
+}
+
+select {
+  width: 75%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+input[type=text]:focus, input[type=password]:focus, select:focus{
+	border: 3px solid #555555;
 }
