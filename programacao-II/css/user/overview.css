@@ -96,10 +96,11 @@ div{
 
 .chamado{
 	width: 95%;
-	height: 100px;
+	height: 120px;
 	margin: 20px;
 	border-radius: 30px;
 	background: #ffffff;
+	/*background-color: #fc0303;*/
 	padding: 10px;
 	text-align: left;
 }
@@ -107,4 +108,15 @@ div{
 .chamado p{
 	margin-top: 5px;
 	margin-left: 50px;
+}
+
+input[type=submit]{
+	width: 15%;
+	background-color: #1E90FF;
+	color: #FFFFFF;
+	margin-top: 12px;
+	margin-left: 83%;
+	border: none;
+	border-radius: 6px;
+	cursor: pointer;
 }
