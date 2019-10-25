@@ -4,7 +4,7 @@
 	<title>Overview</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="../../css/adm/cadastro.css">
-	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="	stackpatha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="stackpatha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -26,7 +26,7 @@
 		</div>
 
 		<div class="content">
-			<form>
+			<form name="form-1">
 				<label for="empresa">Empresa</label><br>
 				<select name="empresa">
 					<option value="sel">Selecione</option>
@@ -34,15 +34,18 @@
 					<option value="empB">Empresa B</option>
 					<option value="empC">Empresa C</option>
 				</select><br>
-				
+
+				<label for="cnpj">CNPJ</label><br>
+				<input type="text" id="cnpj" name="cnpj"><br>
+
 				<label for="titulo">Login</label><br>
-				<input type="text" id="" name="titulo"><br>
-				
+				<input type="text" id="login" name="login"><br>
+
 				<label for="titulo">Senha</label><br>
-				<input type="password" id="" name="titulo"><br>
-				
+				<input type="password" id="password"><br>
+
 				<label for="titulo">Confirmar Senha</label><br>
-				<input type="password" id="" name="titulo"><br>
+				<input type="password" id="passwordconf"><br>
 
 				<a href="overview.html"><input type="submit" value="Enviar"></a>
 			</form>
@@ -50,5 +53,8 @@
 		</div>
 
 	</div>
+<script type="js/cadastro.js">
+
+</script>
 </body>
 </html>

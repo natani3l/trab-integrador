@@ -98,11 +98,36 @@ div{
 	width: 95%;
 	height: 120px;
 	margin: 20px;
-	border-radius: 30px;
+	border-radius: 20px;
 	background: #ffffff;
-	/*background-color: #fc0303;*/
+	border-style: solid;
+	border-color: #ff0000;
 	padding: 10px;
-	text-align: left;
+	/*text-align: left;*/
+}
+
+.chamado-2{
+	width: 95%;
+	height: 120px;
+	margin: 20px;
+	border-radius: 20px;
+	background: #ffffff;
+	border-style: solid;
+	border-color: #d0ff00;
+	padding: 10px;
+	text-align: inherit;
+}
+
+.chamado-3{d0ff00
+	width: 95%;
+	height: 120px;
+	margin: 20px;
+	border-radius: 20px;
+	background: #ffffff;
+	border-style: solid;
+	border-color: #00ff45;
+	padding: 10px;
+	text-align: inherit;
 }
 
 .chamado p{

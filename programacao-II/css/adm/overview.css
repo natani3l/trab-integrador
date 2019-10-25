@@ -93,6 +93,17 @@ div{
 	background-color: #dddfde;
 	float: left;
 }
+.chamado-nao-classificado{
+	width: 95%;
+	height: 100px;
+	margin: 20px;
+	border-radius: 30px;
+	background: #ffffff;
+	padding: 10px;
+	text-align: left;
+	border: solid;
+	border-color: #696969;
+}
 
 .chamado{
 	width: 95%;
@@ -102,7 +113,10 @@ div{
 	background: #ffffff;
 	padding: 10px;
 	text-align: left;
+	/*border: solid;*/
 }
+
+
 
 .chamado p{
 	margin-top: 5px;
