@@ -5,6 +5,10 @@
 	transition: 0.5s;
 }
 
+span{
+	font-size: 12px !important;
+}
+
 body{
 	background-color: #708090;
 	margin: 0;
@@ -23,7 +27,7 @@ div{
 
 .menu{
 	width: 200px;
-	height: 700px;
+	height: 760px;
 	background-color: #1E90FF;
 	float: left;
 }
@@ -85,7 +89,7 @@ div{
 
 .content{
 	width: 800px;
-	height: 650px;
+	height: 710px;
 	background-color: #dddfde;
 	float: left;
 	padding: 50px;
@@ -106,7 +110,7 @@ input[type=submit]{
 	background-color: #1E90FF;
 	color: #FFFFFF;
 	padding: 15px 20px;
-	margin-left: 0 auto;
+	margin-left: 85%;
 	margin-top: 10px;
 	margin-bottom: 40px;
 	border: none;

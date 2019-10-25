@@ -13,7 +13,7 @@
 			<div class="user"><i class="fa fa-user fa-5x"></i></div>
 			<a class="logout" href="../login/login.html">Logout</a>
 			<ul>
-				<li><a href="#">Meus Chamados</a></li>
+				<li><a href="overview.html">Meus Chamados</a></li>
 				<li><a href="classifica.html">Chamados Não Classificados</a></li>
 				<li><a class="active" href="cadastro.html">Cadastrar Usuario</a></li>
 				<li><a href="basedados.html">Base de Dados</a></li>
@@ -26,7 +26,7 @@
 		</div>
 
 		<div class="content">
-			<form name="form-1">
+			<form name="form-1" id="form-1">
 				<label for="empresa">Empresa</label><br>
 				<select name="empresa">
 					<option value="sel">Selecione</option>
@@ -36,16 +36,24 @@
 				</select><br>
 
 				<label for="cnpj">CNPJ</label><br>
-				<input type="text" id="cnpj" name="cnpj"><br>
+				<input type="text" placeholder="xx.xxx.xxx/xxxx-xx" autofocus="" id="cnpj" name="cnpj"><br>
+				<span class="msg-erro" id="msg-cnpj"></span>
+
+				<label for="email">Email</label><br>
+				<input type="text" name="email" id="email" placeholder="nome@dominio"><br>
+				<span class="msg-erro" id="msg-email"></span>
 
 				<label for="titulo">Login</label><br>
 				<input type="text" id="login" name="login"><br>
+				<span class="msg-erro" id="msg-login"></span>
 
 				<label for="titulo">Senha</label><br>
 				<input type="password" id="password"><br>
+				<span class="msg-erro" id="msg-senha"></span>
 
 				<label for="titulo">Confirmar Senha</label><br>
 				<input type="password" id="passwordconf"><br>
+				<span class="msg-erro" id="msg-senhaConfirma"></span>
 
 				<a href="overview.html"><input type="submit" value="Enviar"></a>
 			</form>
@@ -53,8 +61,7 @@
 		</div>
 
 	</div>
-<script type="js/cadastro.js">
 
-</script>
+<script src="../../js/cadastro.js"></script>
 </body>
 </html>
