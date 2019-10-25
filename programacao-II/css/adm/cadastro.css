@@ -18,6 +18,11 @@ div{
 	margin: 0;
 }
 
+.content .chamado-nao-classificado p{
+	margin-top: 5px;
+	margin-left: 50px;
+}
+
 .main{
 	width: 1000px;
 	height: 700px;
@@ -118,6 +123,9 @@ input[type=submit]{
 	cursor: pointer;
 }
 
+a{
+	text-decoration:none; 
+}
 select {
   width: 75%;
   padding: 12px 20px;

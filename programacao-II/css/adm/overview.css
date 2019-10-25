@@ -5,6 +5,25 @@
 	transition: 0.5s;
 }
 
+input[type=submit]{
+	width: 20%;
+	background-color: #1E90FF;
+	color: #FFFFFF;
+	position: absolute;
+	margin-left: 10%;
+	padding: 5px 5px;
+	z-index: 100;
+	top : 80px;
+	left: 68%;
+	border-radius: 6%;
+	cursor: pointer;
+  border: none;
+
+}
+a{
+	text-decoration:none; 
+}
+
 body{
 	background-color: #708090;
 	margin: 0;
@@ -97,10 +116,10 @@ div{
 	width: 95%;
 	height: 100px;
 	margin: 20px;
+	position: relative;
 	border-radius: 30px;
 	background: #ffffff;
 	padding: 10px;
-	text-align: left;
 	border: solid;
 	border-color: #696969;
 }
@@ -109,16 +128,19 @@ div{
 	width: 95%;
 	height: 100px;
 	margin: 20px;
+	position: relative;
 	border-radius: 30px;
 	background: #ffffff;
 	padding: 10px;
-	text-align: left;
-	/*border: solid;*/
+	border: solid;
+	border-color: #ff0000;
 }
 
-
-
 .chamado p{
+	margin-top: 5px;
+	margin-left: 50px;
+}
+.chamado-nao-classificado p{
 	margin-top: 5px;
 	margin-left: 50px;
 }
