@@ -1,0 +1,5 @@
+Ao mostrar para o cliente o andamento do front end recebemos um feedback positivo e poucos elementos precisaram ser modificados. A simplicidade do sistema e as telas agradaveis foram a parte mais elogiada por parte do cliente e suprem bem as necessidades do sistema.
+
+	Elementos que precisaram ser mudados ou adicionados:
+		Cor das telas - Inicialmente fizemos as telas com tons de marrom porém fizeram a exigencia das cores serem em tons de azul.
+		Gerar PDF - Na tela de visualização da OS o cliente pediu pra que exista um botão que gere um pdf com as informações da OS.
