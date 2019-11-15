@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE php>
+<php>
 <head>
 	<title>Visualizar Chamado</title>
 	<meta charset="utf-8">
@@ -7,22 +7,12 @@
 	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="	stackpatha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
 </head>
-
 <body>
-	<div class="main">
-		<div class="menu">
-			<div class="user"><i class="fa fa-user fa-5x"></i></div>
-			<a class="logout" href="../login/login.html">Logout</a>
-			<ul>
-				<li><a href="overview.html">Ínicio</a></li>
-				<li><a class="active" href="#">Abrir Chamado</a></li>
-				<li><a href="basedados.html">Base de Dados</a></li>
-			</ul>
-		</div>
 
-		<div class="top">
-			<p>Visualizar Chamado</p>
-		</div>
+	
+	<div class="main">
+		<?php include "../../includes/menu_left.php"; ?>
+		<?php include "../../includes/top.php"?>
 
 		<div class="content">
 			<form>
@@ -46,7 +36,7 @@
 
 
 			</form>
-			<a href="overview.html"><input type="button" value="Voltar"></a>
+			<a href="overview.php"><input type="button" value="Voltar"></a>
 			<a href="#"><input type="button" value="Gerar PDF"></a>
 			<a href="#"><input type="button" onclick="imprimeAlerta()" value="Encerrar Chamado"</a>
 		</div>

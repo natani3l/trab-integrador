@@ -1,8 +1,10 @@
 DROP DATABASE IF EXISTS dbsupport;
-CREATE DATABASE dbsupport;
-\c dbsupport;
+CREATE DATABASE dbsupport DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE dbsupport;
+DROP USER IF EXISTS 'admdbsupport'@'localhost';
+CREATE USER 'admdbsupport'@'localhost' IDENTIFIED BY '12345';
+GRANT SELECT, INSERT, UPDATE, DELETE ON rent.* TO 'admdbsupport'@'localhost';
 
-DROP TABLE IF EXISTS setor;
 CREATE TABLE setor(
 	id_set INT NOT NULL,
 	nome_set VARCHAR(30) NOT NULL,
@@ -10,7 +12,6 @@ CREATE TABLE setor(
 	CONSTRAINT pk_id_set PRIMARY KEY(id_set)
 );
 
-DROP TABLE IF EXISTS funcionario;
 CREATE TABLE funcionario(
 	login_func VARCHAR(10) NOT NULL,
 	senha_func VARCHAR(10) NOT NULL,
@@ -24,7 +25,6 @@ CREATE TABLE funcionario(
 	REFERENCES setor(id_set)
 );
 
-DROP TABLE IF EXISTS empresa;
 CREATE TABLE empresa(
 		cnpj_emp INT NOT NULL,
 		nome_emp VARCHAR(30) NOT NULL,
@@ -32,7 +32,6 @@ CREATE TABLE empresa(
 		CONSTRAINT pk_cnpj_emp PRIMARY KEY (cnpj_emp)
 );
 
-DROP TABLE IF EXISTS cliente;
 CREATE TABLE cliente(
 	login_client VARCHAR(10) NOT NULL,
 	senha_client VARCHAR(10) NOT NULL,
@@ -46,7 +45,6 @@ CREATE TABLE cliente(
 	REFERENCES empresa(cnpj_emp)
 );
 
-DROP TABLE IF EXISTS status;
 CREATE TABLE status(
 	sig_stat VARCHAR(3) NOT NULL,
 	desc_stat VARCHAR(30) NOT NULL,
@@ -55,7 +53,6 @@ CREATE TABLE status(
 	CONSTRAINT pk_sig_stat PRIMARY KEY (sig_stat)
 );
 
-DROP TABLE IF EXISTS ordem_servico;
 CREATE TABLE ordem_servico(
 	id_os INT NOT NULL,
 	titulo_os VARCHAR(30) NOT NULL,
@@ -77,10 +74,9 @@ CREATE TABLE ordem_servico(
 	REFERENCES status(sig_stat)
 );
 
-DROP TABLE IF EXISTS mensagem;
 CREATE TABLE mensagem(
 	id_msg INT NOT NULL,
-	conteudo_msg VARCHAR(2000) NOT NULL,
+	conteudo_msg TEXT NOT NULL,
 	data_msg DATE NOT NULL,
 	tipo_msg INT NOT NULL,
 	client_msg INT,
@@ -89,14 +85,11 @@ CREATE TABLE mensagem(
 	login_client VARCHAR(10),
 	login_func VARCHAR(10),
 
-	CONSTRAINT pk_id_msg PRIMARY KEY (id_msg),
+	PRIMARY KEY (id_msg),
 
-	CONSTRAINT fk_id_os FOREIGN KEY (id_os)
-	REFERENCES ordem_servico(id_os),
+	FOREIGN KEY (id_os)	REFERENCES ordem_servico(id_os),
 
-	CONSTRAINT fk_login_client FOREIGN KEY (login_client)
-	REFERENCES cliente(login_client),
+	FOREIGN KEY (login_client) REFERENCES cliente(login_client),
 
-	CONSTRAINT fk_login_func FOREIGN KEY (login_func)
-	REFERENCES funcionario(login_func)
+	FOREIGN KEY (login_func) REFERENCES funcionario(login_func)
 );

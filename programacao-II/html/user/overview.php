@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE php>
+<php>
 <head>
 	<title>Overview</title>
 	<meta charset="utf-8">
@@ -7,49 +7,39 @@
 	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="	stackpatha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
 </head>
+
 <body>
 	<div class="main">
-		<div class="menu">
-			<div class="user"><i class="fa fa-user fa-5x"></i></div>
-			<a class="logout" href="../login/login.html">Logout</a>
-			<ul>
-				<li><a class="active" href="#">Ínicio</a></li>
-				<li><a href="novochamado.html">Abrir Chamado</a></li>
-				<li><a href="basedados.html">Base de Dados</a></li>
-			</ul>
-		</div>
-
-		<div class="top">
-			<p>Chamados em Aberto</p>
-		</div>
+		<?php include "../../includes/menu_left.php"; ?>
+		<?php include "../../includes/top.php"?>
 
 		<div class="content">
 			<div class="chamado">
 				<p>Titulo 1</p>
 				<p>Status</p>
-				<a href="viewOS.html"><input type="submit" value="+ Detalhes"></a>
+				<a href="viewOS.php"><input type="submit" value="+ Detalhes"></a>
 			</div>
 
 			<div class="chamado-2">
 				<p>Titulo 2</p>
 				<p>Status</p>
-				<a href="viewOS.html"><input type="submit" value="+ Detalhes"></a>
+				<a href="viewOS.php"><input type="submit" value="+ Detalhes"></a>
 			</div>
 
 			<div class="chamado-3">
 				<p>Titulo 3</p>
 				<p>Status</p>
-				<a href="viewOS.html"><input type="submit" value="+ Detalhes"></a>
+				<a href="viewOS.php"><input type="submit" value="+ Detalhes"></a>
 			</div>
 
 			<!-- <div class="chamado">
 				<p>Titulo 4</p>
 				<p>Status</p>
-				<a href="viewOS.html"><input type="submit" value="+ Detalhes"></a>
+				<a href="viewOS.php"><input type="submit" value="+ Detalhes"></a>
 			</div> -->
 
 		</div>
 
 	</div>
 </body>
-</html>
+</php>

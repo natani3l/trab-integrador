@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE php>
+<php>
 <head>
 	<title>Novo Chamado</title>
 	<meta charset="utf-8">
@@ -8,20 +8,11 @@
 	<link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
 </head>
 <body>
-	<div class="main">
-		<div class="menu">
-			<div class="user"><i class="fa fa-user fa-5x"></i></div>
-			<a class="logout" href="../login/login.html">Logout</a>
-			<ul>
-				<li><a href="overview.html">Ínicio</a></li>
-				<li><a class="active" href="#">Abrir Chamado</a></li>
-				<li><a href="basedados.html">Base de Dados</a></li>
-			</ul>
-		</div>
 
-		<div class="top">
-			<p>Abrir Novo Chamado</p>
-		</div>
+	
+	<div class="main">
+		<?php include "../../includes/menu_left.php"; ?>
+		<?php include "../../includes/top.php"?>
 
 		<div class="content">
 			<form>
@@ -36,11 +27,11 @@
 				<label for="anexar">Anexar imagem</label><br>
 				<input type="file" name="arquivo" value="" placeholder="anexar imagem"><br><br>
 			</form>
-			<a href="overview.html"><input type="submit" value="enviar"></a>
+			<a href="overview.php"><input type="submit" value="enviar"></a>
 		</div>
 
 
 
 	</div>
 </body>
-</html>
+</php>

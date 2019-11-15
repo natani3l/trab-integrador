@@ -14,15 +14,15 @@
 
 			<h1>Login de Usuário</h1>
 
-			 
+
 			<input id="login" name="login" required="required" type="text" placeholder="Usuário"/>
 			<br>
-			
-			<input id="senha" name="senha" required="required" type="password" placeholder="Senha"/> 
+
+			<input id="senha" name="senha" required="required" type="password" placeholder="Senha"/>
 			<br>
 
-			<a href="../../html/user/overview.html"><input type="submit" value="LOGIN"></a>
-		
+			<a href="../../html/user/overview.php"><input type="submit" value="LOGIN"></a>
+
 			<p>
 				Esqueceu sua <a href="https://www.google.com.br" target="_blank">senha</a>?
 			</p>

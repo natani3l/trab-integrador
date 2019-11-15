@@ -9,16 +9,7 @@
 </head>
 <body>
 	<div class="main">
-		<div class="menu">
-			<div class="user"><i class="fa fa-user fa-5x"></i></div>
-			<a class="logout" href="../login/login.html">Logout</a>
-			<ul>
-				<li><a href="overview.html">Meus Chamados</a></li>
-				<li><a class="active" href="classifica.html">Chamados Não Classificados</a></li>
-				<li><a href="cadastro.html">Cadastrar Usuario</a></li>
-				<li><a href="basedados.html">Base de Dados</a></li>
-			</ul>
-		</div>
+		<?php include "../../includes-adm/menu_left.php" ?>
 
 		<div class="top">
 			<p>Classificação de chamados</p>
@@ -27,7 +18,7 @@
 		<div class="content">
 	     <div class="chamado-OS">
          <label for=""><strong>Número chamado (OS): 109</strong></label><br><br>
-        
+
          <label><strong>Descrição do chamado:</strong></label>
          <p>Não consigo visualizar as solicitações enviadas pelos clientes</p>
 
@@ -46,7 +37,7 @@
            <option value="bb">Bruno Bevilaqua</option>
          </select><br><br>
 
-         <a href="overview.html"><input type="submit" value="Enviar"></a>
+         <a href="overview.php"><input type="submit" value="Enviar"></a>
 
        </div>
 

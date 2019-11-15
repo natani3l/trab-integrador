@@ -9,17 +9,7 @@
 </head>
 <body>
 	<div class="main">
-		<div class="menu">
-			<div class="user"><i class="fa fa-user fa-5x"></i></div>
-			<a class="logout" href="../login/login.html">Logout</a>
-			<ul>
-				<li><a href="overview.html">Meus Chamados</a></li>
-				<li><a href="classifica.html">Chamados Não Classificados</a></li>
-				<li><a class="active" href="cadastro.html">Cadastrar Usuario</a></li>
-				<li><a href="basedados.html">Base de Dados</a></li>
-
-			</ul>
-		</div>
+		<?php include "../../includes-adm/menu_left.php" ?>
 
 		<div class="top">
 			<p>Cadastrar Usuario</p>
@@ -55,7 +45,7 @@
 				<input type="password" id="passwordconf"><br>
 				<span class="msg-erro" id="msg-senhaConfirma"></span>
 
-				<a href="overview.html"><input type="submit" value="Enviar"></a>
+				<a href="overview.php"><input type="submit" value="Enviar"></a>
 			</form>
 
 		</div>

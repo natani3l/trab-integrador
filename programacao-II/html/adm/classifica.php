@@ -9,16 +9,7 @@
 </head>
 <body>
 	<div class="main">
-		<div class="menu">
-			<div class="user"><i class="fa fa-user fa-5x"></i></div>
-			<a class="logout" href="../login/login.html">Logout</a>
-			<ul>
-				<li><a href="overview.html">Meus Chamados</a></li>
-				<li><a class="active" href="classifica.html">Chamados Não Classificados</a></li>
-				<li><a href="cadastro.html">Cadastrar Usuario</a></li>
-				<li><a href="basedados.html">Base de Dados</a></li>
-			</ul>
-		</div>
+		<?php include "../../includes-adm/menu_left.php" ?>
 
 		<div class="top">
 			<p>Chamados em aberto NÃO classificados</p>
@@ -28,25 +19,25 @@
 			<div class="chamado-nao-classificado">
 				<p>Titulo 1</p>
 				<p>Status</p>
-				<a href="classificarChamado.html"><input type="submit" value="Classificar chamado"></a>
+				<a href="classificarChamado.php"><input type="submit" value="Classificar chamado"></a>
 			</div>
 
 			<div class="chamado-nao-classificado">
 				<p>Titulo 2</p>
 				<p>Status</p>
-				<a href="classificarChamado.html"><input type="submit" value="Classificar chamado"></a>
+				<a href="classificarChamado.php"><input type="submit" value="Classificar chamado"></a>
 			</div>
 
 			<div class="chamado-nao-classificado">
 				<p>Titulo 3</p>
 				<p>Status</p>
-				<a href="classificarChamado.html"><input type="submit" value="Classificar chamado"></a>
+				<a href="classificarChamado.php"><input type="submit" value="Classificar chamado"></a>
 			</div>
 
 			<div class="chamado-nao-classificado">
 				<p>Titulo 4</p>
 				<p>Status</p>
-				<a href="classificarChamado.html"><input type="submit" value="Classificar chamado"></a>
+				<a href="classificarChamado.php"><input type="submit" value="Classificar chamado"></a>
 			</div>
 
 		</div>
