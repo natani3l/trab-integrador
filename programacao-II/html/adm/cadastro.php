@@ -9,24 +9,28 @@
 </head>
 <body>
 	<div class="main">
-		<?php include "../../includes-adm/menu_left.php" ?>
+		<?php
+		include "../../includes-adm/menu_left.php";
+		include "../../includes-adm/top.php";
+		include "../../classes/BD.php";
 
-		<div class="top">
-			<p>Cadastrar Usuario</p>
-		</div>
-
+		?>
 		<div class="content">
-			<form name="form-1" id="form-1">
-				<label for="empresa">Empresa</label><br>
+			<form method="POST" action="../../classes/userCadastro.php">
+				<!-- <label for="empresa">Empresa</label><br>
 				<select name="empresa">
 					<option value="sel">Selecione</option>
 					<option value="empA">Empresa A</option>
 					<option value="empB">Empresa B</option>
 					<option value="empC">Empresa C</option>
-				</select><br>
+				</select><br> -->
 
 				<label for="titulo">CNPJ</label><br>
-				<input type="text" placeholder="xx.xxx.xxx/xxxx-xx" autofocus="" id="cnpj" name="cnpj"><br>
+				<input type="text" placeholder="xx.xxx.xxx/xxxx-xx" autofocus="" id="cnpj" maxlength="11" name="cnpj"><br>
+				<span class="msg-erro" id="msg-cnpj"></span>
+
+				<label for="titulo">Nome</label><br>
+				<input type="text" id="nome" name="nome"><br>
 				<span class="msg-erro" id="msg-cnpj"></span>
 
 				<label for="titulo">Email</label><br>
@@ -38,14 +42,14 @@
 				<span class="msg-erro" id="msg-login"></span>
 
 				<label for="titulo">Senha</label><br>
-				<input type="password" id="password"><br>
-				<span class="msg-erro" id="msg-senha"></span>
+				<input type="password" id="password" name="senha" ><br>
+				<span class="msg-erro" id="msg-senha" name="senha" ></span>
 
 				<label for="titulo">Confirmar Senha</label><br>
-				<input type="password" id="passwordconf"><br>
+				<input type="password" id="passwordconf" name="senhaconfir"><br>
 				<span class="msg-erro" id="msg-senhaConfirma"></span>
 
-				<a href="overview.php"><input type="submit" value="Enviar"></a>
+				<a href="overview.php"><input type="submit" value="enviar"></a>
 			</form>
 
 		</div>

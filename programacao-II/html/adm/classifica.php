@@ -11,9 +11,7 @@
 	<div class="main">
 		<?php include "../../includes-adm/menu_left.php" ?>
 
-		<div class="top">
-			<p>Chamados em aberto NÃO classificados</p>
-		</div>
+		<?php include "../../includes-adm/top.php" ?>
 
 		<div class="content">
 			<div class="chamado-nao-classificado">

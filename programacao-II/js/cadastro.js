@@ -15,7 +15,7 @@ function validaCadastro(){
 
   campo = document.getElementById("cnpj");
   erro = document.getElementById("msg-cnpj");
-  if ((campo.value == "") || (campo.value.length < 14)) {
+  if ((campo.value == "") || (campo.value.length < 12)) {
     mostraErro(erro, "Preencha o campo CNPJ corretamente!")
   }else{
     ocultaErro(erro);
