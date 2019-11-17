@@ -16,7 +16,7 @@
 
 		?>
 		<div class="content">
-			<form method="POST" action="../../classes/userCadastro.php">
+			<form method="POST" action="../../classes/userCadastro.php" id="form-1">
 				<!-- <label for="empresa">Empresa</label><br>
 				<select name="empresa">
 					<option value="sel">Selecione</option>

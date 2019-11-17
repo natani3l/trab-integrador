@@ -15,7 +15,7 @@ function validaCadastro(){
 
   campo = document.getElementById("cnpj");
   erro = document.getElementById("msg-cnpj");
-  if ((campo.value == "") || (campo.value.length < 12)) {
+  if ((campo.value == "") || (campo.value.length < 11)) {
     mostraErro(erro, "Preencha o campo CNPJ corretamente!")
   }else{
     ocultaErro(erro);
@@ -44,6 +44,8 @@ function validaCadastro(){
   erro = document.getElementById("msg-senhaConfirma");
   if (campo.value != campoDois.value){
     mostraErro(erro, "Senhas diferentes!")
+  }else if (campo.value = "" || campoDois.value = "") {
+  	mostraErro(erro, "Preencha com senha!");
   }else{
     ocultaErro(erro);
   }
