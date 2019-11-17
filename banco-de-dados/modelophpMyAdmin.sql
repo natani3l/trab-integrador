@@ -26,7 +26,7 @@ CREATE TABLE funcionario(
 );
 
 CREATE TABLE empresa(
-		cnpj_emp INT NOT NULL,
+		cnpj_emp BIGINT NOT NULL,
 		nome_emp VARCHAR(30) NOT NULL,
 
 		CONSTRAINT pk_cnpj_emp PRIMARY KEY (cnpj_emp)
@@ -37,12 +37,11 @@ CREATE TABLE cliente(
 	senha_client VARCHAR(10) NOT NULL,
 	email_client VARCHAR(50) NOT NULL,
 	nome_client VARCHAR(20) NOT NULL,
-	cnpj_emp INT,
+	cnpj_emp BIGINT,
 
 	CONSTRAINT pk_login_client PRIMARY KEY(login_client),
 
-	CONSTRAINT fk_cnpj_emp FOREIGN KEY(cnpj_emp)
-	REFERENCES empresa(cnpj_emp)
+	CONSTRAINT fk_cnpj_emp FOREIGN KEY(cnpj_emp) REFERENCES empresa(cnpj_emp)
 );
 
 CREATE TABLE status(
