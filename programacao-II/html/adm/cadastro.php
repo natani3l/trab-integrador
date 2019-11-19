@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php include "../../classes/autenticado.php";?>
 <html>
 <head>
 	<title>Overview</title>

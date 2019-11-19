@@ -37,19 +37,20 @@
 
 				if ($dados[0]['login_client'] != "") {
 					session_start();
+					$_SESSION['loginClient'] = $dados[0]['login_client'];
 					$_SESSION['nome'] = $dados[0]['nome_client'];
 					$_SESSION['cnpj'] = $dados[0]['cnpj_emp'];
-					$expira = time() + 60 * 60 * 24 * 7;
-					setcookie("Nome", $dados[0]['nome_client'], $expira);
-					setcookie("CNPJ", $dados[0]['cnpj_emp'], $expira);
+					$_SESSION['email'] = $dados[0]['email_client'];
+					$_SESSION['autenticado'] = 1;
 					header("Location: http://localhost/trab-integrador/programacao-II/html/user/overview.php");
 
 				}elseif ($dadosAdm[0]['login_func'] != "") {
 					session_start();
+
 					$_SESSION['nome'] = $dados[0]['nome_func'];
-					$expira = time() + 60 * 60 * 24 * 7;
-					setcookie("Nome", $dados[0]['nome_client'], $expira);
-					setcookie("CNPJ", $dados[0]['cnpj_emp'], $expira);
+					$_SESSION['loginFunc'] = $dados[0]['login_func'];
+					$_SESSION['autenticado'] = 1;
+
 					header("Location: http://localhost/trab-integrador/programacao-II/html/adm/overview.php");
 
 				}else{
@@ -59,10 +60,10 @@
 			}
 			?>
 
-
 			<p>
 				Esqueceu sua <a href="https://www.google.com.br" target="_blank">senha</a>?
 			</p>
+
 		</div>
 	</div>
 

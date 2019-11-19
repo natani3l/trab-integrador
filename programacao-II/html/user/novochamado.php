@@ -1,4 +1,5 @@
-<!DOCTYPE php>
+<!DOCTYPE html>
+<?php include "../../classes/autenticado.php";?>
 <php>
 <head>
 	<title>Novo Chamado</title>
@@ -9,7 +10,7 @@
 </head>
 <body>
 
-	
+
 	<div class="main">
 		<?php include "../../includes/menu_left.php"; ?>
 		<?php include "../../includes/top.php"?>
@@ -18,8 +19,6 @@
 			<form>
 				<label for="titulo">Titulo</label><br>
 				<input type="text" id="" name="titulo"><br>
-
-
 
 				<label for="descricao">Descreva o problema encontrado</label><br>
 				<textarea name="descricao"></textarea><br><br>

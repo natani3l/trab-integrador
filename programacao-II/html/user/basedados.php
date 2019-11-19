@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php include "../../classes/autenticado.php";?>
 <html>
 <head>
 	<title>Overview</title>
@@ -8,7 +9,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
 </head>
 <body>
-	
+
 	<div class="main">
 
 		<?php include "../../includes/menu_left.php"; ?>

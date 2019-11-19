@@ -1,4 +1,5 @@
 <!DOCTYPE php>
+<?php include "../../classes/autenticado.php";?>
 <php>
 <head>
 	<title>Visualizar Chamado</title>
@@ -9,7 +10,7 @@
 </head>
 <body>
 
-	
+
 	<div class="main">
 		<?php include "../../includes/menu_left.php"; ?>
 		<?php include "../../includes/top.php"?>

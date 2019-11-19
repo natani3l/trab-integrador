@@ -1,4 +1,5 @@
-<!DOCTYPE php>
+<!DOCTYPE html>
+<?php include "../../classes/autenticado.php";?>
 <php>
 <head>
 	<title>Overview</title>
@@ -12,6 +13,7 @@
 	<div class="main">
 		<?php include "../../includes/menu_left.php"; ?>
 		<?php include "../../includes/top.php"?>
+
 
 		<div class="content">
 			<div class="chamado">
@@ -37,8 +39,14 @@
 				<p>Status</p>
 				<a href="viewOS.php"><input type="submit" value="+ Detalhes"></a>
 			</div> -->
+			<?php
+				$teste = 1;
 
+				echo $teste;
+
+			?>
 		</div>
+
 
 	</div>
 </body>

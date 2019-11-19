@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php include "../../classes/autenticado.php";?>
 <html>
 <head>
 	<title>Overview</title>
@@ -10,7 +11,6 @@
 <body>
 	<div class="main">
 		<?php include "../../includes-adm/menu_left.php" ?>
-		<?php session_start(); ?>
 		<?php include "../../includes-adm/top.php" ?>
 
 		<div class="content">

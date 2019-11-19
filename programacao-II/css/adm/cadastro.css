@@ -70,17 +70,17 @@ div{
 }
 
 .logout{
-	color: #ffffff;
+	border: none;
+	border-radius: 10px;
+	text-align: center;
+	background-color: #1E90FF;
+	color: black;
 	text-decoration: none;
-	margin-left: 80px;
+	margin-left: 75px;
+	cursor: pointer;
 }
-
-.logout a:link{
-	color: #ffffff;
-}
-
-.logout a:visited{
-	color: #ffffff;
+.logout:hover{
+	background-color: white;
 }
 
 .top{
@@ -91,6 +91,8 @@ div{
 	float: left;
 	color: #ffffff;
 }
+
+
 
 .content{
 	width: 800px;
@@ -124,7 +126,7 @@ input[type=submit]{
 }
 
 a{
-	text-decoration:none; 
+	text-decoration:none;
 }
 select {
   width: 75%;
