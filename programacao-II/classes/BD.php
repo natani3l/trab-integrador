@@ -21,6 +21,10 @@ class BD{
         return $this->conn;
     }
 
+    function insert($sql){
+      mysqli_query($this->conn, $sql);
+    }
+
     function select($sql) {
     //recebe um select qualquer, executa e devolve um array de resultados.
     //o resultado será um array com índice numérico, onde cada linha conterá um array associativo com os dados selecionados no BD

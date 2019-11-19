@@ -47,19 +47,19 @@ CREATE TABLE cliente(
 CREATE TABLE status(
 	sig_stat VARCHAR(3) NOT NULL,
 	desc_stat VARCHAR(30) NOT NULL,
-	prioridade_stat VARCHAR(5) NOT NULL,
 
 	CONSTRAINT pk_sig_stat PRIMARY KEY (sig_stat)
 );
 
 CREATE TABLE ordem_servico(
-	id_os INT NOT NULL,
+	id_os INT NOT NULL AUTO_INCREMENT,
 	titulo_os VARCHAR(30) NOT NULL,
 	abertura_os DATE NOT NULL,
 	fim_os DATE,
 	login_client VARCHAR(10),
 	login_func VARCHAR(10),
 	sig_stat VARCHAR(3),
+	prioridade_stat VARCHAR(5),
 
 	CONSTRAINT pk_id_os PRIMARY KEY (id_os),
 
@@ -74,13 +74,11 @@ CREATE TABLE ordem_servico(
 );
 
 CREATE TABLE mensagem(
-	id_msg INT NOT NULL,
+	id_msg INT NOT NULL AUTO_INCREMENT,
 	conteudo_msg TEXT NOT NULL,
-	data_msg DATE NOT NULL,
+	data_msg DATETIME NOT NULL,
 	tipo_msg INT NOT NULL,
-	client_msg INT,
-	func_msg INT,
-	id_os INT,
+	id_os INT NOT NULL,
 	login_client VARCHAR(10),
 	login_func VARCHAR(10),
 

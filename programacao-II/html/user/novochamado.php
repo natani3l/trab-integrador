@@ -16,7 +16,7 @@
 		<?php include "../../includes/top.php"?>
 
 		<div class="content">
-			<form>
+			<form method="post">
 				<label for="titulo">Titulo</label><br>
 				<input type="text" id="" name="titulo"><br>
 
@@ -25,8 +25,21 @@
 
 				<label for="anexar">Anexar imagem</label><br>
 				<input type="file" name="arquivo" value="" placeholder="anexar imagem"><br><br>
+
+				<input name="submit" type="submit" value="Enviar">
 			</form>
-			<a href="overview.php"><input type="submit" value="enviar"></a>
+
+
+			<?php
+			include_once "../../classes/abrirChamado.php";
+			
+				if(isset($_POST['submit'])){
+					$aux = new abrirChamado();
+					$aux->novoChamado();
+				}
+
+			?>
+
 		</div>
 
 

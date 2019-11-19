@@ -34,11 +34,6 @@
 				<a href="viewOS.php"><input type="submit" value="+ Detalhes"></a>
 			</div>
 
-			<!-- <div class="chamado">
-				<p>Titulo 4</p>
-				<p>Status</p>
-				<a href="viewOS.php"><input type="submit" value="+ Detalhes"></a>
-			</div> -->
 			<?php
 				$teste = 1;
 
