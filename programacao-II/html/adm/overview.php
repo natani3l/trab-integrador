@@ -33,10 +33,6 @@
 				<p>Titulo 4</p>
 				<p>Status</p>
 			</div>
-			<?php
-			echo $_SESSION['nome'];
-			echo $_SESSION['cnpj'];
-			?>
 		</div>
 
 	</div>

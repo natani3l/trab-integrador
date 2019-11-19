@@ -5,11 +5,10 @@ class userCadastro{
 
     function __construct(){
       $this->bd = new BD();
-      //Check connection
+      
       if (mysqli_connect_errno()){
         echo "Erro" . mysqli_connect_error();
       }
-
     }
 
     function insertValues(){
@@ -25,9 +24,19 @@ class userCadastro{
 
       $result = "INSERT INTO cliente (login_client, senha_client, email_client, nome_client, cnpj_emp) VALUES ('$login', '$senha', '$email', '$nome', '$cnpj')";
       $resultT = mysqli_query($this->bd->getConnection(), $result);
+    }
 
+    function insertValuesAdm(){
+      //Cadastrar clienteq
+      $login = $_POST['login'];
+      $senha = $_POST['senha'];
+      $email = $_POST['email'];
+      $nome = $_POST['nome'];
+      //$resultCompany = "INSERT INTO funcionario (cnpj_emp, nome_emp) VALUES ('$cnpj', '$nome')";
+      //$resultTCompany = mysqli_query($this->bd->getConnection(), $resultCompany);
 
-      //header("Location: http://localhost/trab-integrador/programacao-II/html/adm/overview.php");
+      $result = "INSERT INTO funcionario (login_func, senha_func, email_func, nome_func) VALUES ('$login', '$senha', '$email', '$nome')";
+      $resultT = mysqli_query($this->bd->getConnection(), $result);
     }
 
     function authenticate($login, $senha){
@@ -36,5 +45,10 @@ class userCadastro{
       return $result;
     }
 
+    function authenticateAdm($login, $senha){
+      $sql = "SELECT * FROM funcionario WHERE login_func='$login' AND senha_func = '$senha'";
+      $result = $this->bd->select($sql);
+      return $result;
+    }
 }
 ?>

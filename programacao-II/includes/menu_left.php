@@ -4,6 +4,6 @@
   <ul>
     <li><a href="overview.php">Ínicio</a></li>
     <li><a href="novochamado.php">Abrir Chamado</a></li>
-    <li><a class="active" href="basedados.php">Base de Dados</a></li>
+    <li><a href="basedados.php">Base de Dados</a></li>
   </ul>
 </div>

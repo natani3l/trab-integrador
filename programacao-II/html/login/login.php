@@ -17,7 +17,7 @@
 			<form method="post">
 
 
-			<input id="login" name="login" required="required" type="text" placeholder="Usuário"/>
+			<input id="login" autofocus="" name="login" required="required" type="text" placeholder="Usuário"/>
 			<br>
 
 			<input id="senha" name="senha" required="required" type="password" placeholder="Senha"/>
@@ -29,24 +29,33 @@
 
 			include "../../classes/userCadastro.php";
 
-			if (isset($_POST['enter'])){
+			if (isset($_POST['enter'])) {
 				$log = new userCadastro();
+
 				$dados = $log->authenticate($_POST['login'], $_POST['senha']);
-				if (empty($dados)){
-					header("Location: login.php?erro=1");
-				}else{
+				$dadosAdm = $log->authenticateAdm($_POST['login'], $_POST['senha']);
+
+				if ($dados[0]['login_client'] != "") {
 					session_start();
-					//header("Location: http://localhost/trab-integrador/programacao-II/html/user/overview.php");
 					$_SESSION['nome'] = $dados[0]['nome_client'];
 					$_SESSION['cnpj'] = $dados[0]['cnpj_emp'];
-
 					$expira = time() + 60 * 60 * 24 * 7;
 					setcookie("Nome", $dados[0]['nome_client'], $expira);
 					setcookie("CNPJ", $dados[0]['cnpj_emp'], $expira);
+					header("Location: http://localhost/trab-integrador/programacao-II/html/user/overview.php");
 
+				}elseif ($dadosAdm[0]['login_func'] != "") {
+					session_start();
+					$_SESSION['nome'] = $dados[0]['nome_func'];
+					$expira = time() + 60 * 60 * 24 * 7;
+					setcookie("Nome", $dados[0]['nome_client'], $expira);
+					setcookie("CNPJ", $dados[0]['cnpj_emp'], $expira);
 					header("Location: http://localhost/trab-integrador/programacao-II/html/adm/overview.php");
 
+				}else{
+				 		header("Location: login.php?erro=1");
 				}
+
 			}
 			?>
 
