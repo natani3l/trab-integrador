@@ -1,24 +1,34 @@
 <?php
 require_once ("BD.php");
-$login = $_POST['login'];
-$senha = $_POST['senha'];
-$email = $_POST['email'];
-$nome = $_POST['nome'];
-$cnpj = $_POST['cnpj'];
+class userCadastro{
+    private $bd;
 
-$resultCompany = "INSERT INTO empresa (cnpj_emp, nome_emp) VALUES ('$cnpj', '$nome')";
-$resultTCompany = mysqli_query($conn, $resultCompany);
+    function __construct(){
+      $this->bd = new BD();
+      //Check connection
+      if (mysqli_connect_errno()){
+        echo "Erro" . mysqli_connect_error();
+      }
 
-echo "<br><br>";
+    }
 
-$result = "INSERT INTO cliente (login_client, senha_client, email_client, nome_client, cnpj_emp) VALUES ('$login', '$senha', '$email', '$nome', '$cnpj')";
-$resultT = mysqli_query($conn, $result);
+    function insertValues(){
+      //Cadastrar clienteq
+      $login = $_POST['login'];
+      $senha = $_POST['senha'];
+      $email = $_POST['email'];
+      $nome = $_POST['nome'];
+      $cnpj = $_POST['cnpj'];
 
-/*
-/*if (mysqli_num_rows($resultT) == 0){
-  echo "nao foi";
-}else{
-  header("Location: http://localhost/trab-integrador/programacao-II/html/adm/overview.php");
-}*/
+      $resultCompany = "INSERT INTO empresa (cnpj_emp, nome_emp) VALUES ('$cnpj', '$nome')";
+      $resultTCompany = mysqli_query($this->bd->getConnection(), $resultCompany);
 
+      $result = "INSERT INTO cliente (login_client, senha_client, email_client, nome_client, cnpj_emp) VALUES ('$login', '$senha', '$email', '$nome', '$cnpj')";
+      $resultT = mysqli_query($this->bd->getConnection(), $result);
+
+
+      //header("Location: http://localhost/trab-integrador/programacao-II/html/adm/overview.php");
+    }
+
+}
 ?>

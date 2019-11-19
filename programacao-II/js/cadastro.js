@@ -44,12 +44,9 @@ function validaCadastro(){
   erro = document.getElementById("msg-senhaConfirma");
   if (campo.value != campoDois.value){
     mostraErro(erro, "Senhas diferentes!")
-  }else if (campo.value = "" || campoDois.value = "") {
-  	mostraErro(erro, "Preencha com senha!");
   }else{
     ocultaErro(erro);
   }
-
 
   if(contErros > 0)
     return false;

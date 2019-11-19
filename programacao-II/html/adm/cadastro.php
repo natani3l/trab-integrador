@@ -16,7 +16,7 @@
 
 		?>
 		<div class="content">
-			<form method="POST" action="../../classes/userCadastro.php" id="form-1">
+			<form method="POST" id="form-1">
 				<!-- <label for="empresa">Empresa</label><br>
 				<select name="empresa">
 					<option value="sel">Selecione</option>
@@ -49,8 +49,18 @@
 				<input type="password" id="passwordconf" name="senhaconfir"><br>
 				<span class="msg-erro" id="msg-senhaConfirma"></span>
 
-				<a href="overview.php"><input type="submit" value="enviar"></a>
+				<input name="submit" type="submit" onsubmit="return false;" value="enviar">
 			</form>
+			<?php
+			include_once "../../classes/userCadastro.php";
+
+				if(isset($_POST['submit'])){
+					$tes = new userCadastro();
+
+					$tes->insertValues();
+				}
+
+			?>
 
 		</div>
 
