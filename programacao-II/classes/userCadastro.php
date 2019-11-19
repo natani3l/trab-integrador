@@ -30,5 +30,11 @@ class userCadastro{
       //header("Location: http://localhost/trab-integrador/programacao-II/html/adm/overview.php");
     }
 
+    function authenticate($login, $senha){
+      $sql = "SELECT * FROM cliente WHERE login_client='$login' AND senha_client = '$senha'";
+      $result = $this->bd->select($sql);
+      return $result;
+    }
+
 }
 ?>

@@ -10,7 +10,7 @@
 <body>
 	<div class="main">
 		<?php include "../../includes-adm/menu_left.php" ?>
-
+		<?php session_start(); ?>
 		<?php include "../../includes-adm/top.php" ?>
 
 		<div class="content">
@@ -33,7 +33,10 @@
 				<p>Titulo 4</p>
 				<p>Status</p>
 			</div>
-
+			<?php
+			echo $_SESSION['nome'];
+			echo $_SESSION['cnpj'];
+			?>
 		</div>
 
 	</div>
