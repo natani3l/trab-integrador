@@ -26,6 +26,7 @@
 
         $request = "SELECT id_os FROM ordem_servico WHERE titulo_os = '$titulo';";
         $result = $this->bd->select($request);
+
         $idOS = $result[0]['id_os'];
 
         $queryMSG = "INSERT INTO mensagem (conteudo_msg, data_msg, tipo_msg, id_os, login_client) VALUES('$descricao', '$dataMensagem', 0, '$idOS', '$cliente');";

@@ -34,12 +34,6 @@
 				<a href="viewOS.php"><input type="submit" value="+ Detalhes"></a>
 			</div>
 
-			<?php
-				$teste = 1;
-
-				echo $teste;
-
-			?>
 		</div>
 
 

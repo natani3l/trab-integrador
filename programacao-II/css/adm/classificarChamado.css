@@ -21,6 +21,7 @@ div{
 .content .chamado-nao-classificado p{
 	margin-top: 5px;
 	margin-left: 50px;
+	overflow: hidden;
 }
 
 .main{
