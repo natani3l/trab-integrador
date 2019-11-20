@@ -14,29 +14,75 @@
 
 		<?php include "../../includes-adm/top.php" ?>
 
+
+
 		<div class="content">
 	     <div class="chamado-OS">
-         <label for=""><strong>Número chamado (OS): 109</strong></label><br><br>
+				 <form method="post">
+
+
+				 <?php
+						 include "../../classes/consultaBanco.php";
+						 $consultaDesc = new consultaBanco();
+						 $cta = $consultaDesc->consultaDescricao($_GET['id']);
+				 ?>
+
+         <label for=""><strong>Número chamado (OS): <?php echo $_GET['id'];?></strong></label><br><br>
 
          <label><strong>Descrição do chamado:</strong></label>
-         <p>Não consigo visualizar as solicitações enviadas pelos clientes</p>
+         <p>
+				 <?php
 
-         <label for="chamado"><strong>Selecione o nivel de prioridade:</strong></label><br>
-         <select name="chamado">
+						foreach ($cta as $k => $v) {
+							echo $cta[$k]['conteudo_msg'];
+						}
+				 ?></p>
+
+         <label for="chamadoC"><strong>Selecione o nivel de prioridade:</strong></label><br>
+         <select name="chamadoC">
            <option value="sel">Selecione</option>
-           <option value="osVerde">Verde</option>
-           <option value="osAmarelo">Amarelo</option>
-           <option value="osVermelho">Vermelho</option>
+           <option value="baixa">Baixa</option>
+           <option value="media">Média</option>
+           <option value="alta">Alta</option>
          </select><br><br>
+
+
+
 
          <label for="chamado"><strong>Selecione o responsavel pelo atendimento:</strong></label><br>
          <select name="chamado">
-           <option value="sel">Selecione</option>
-           <option value="ntf">Nataniel Lemes</option>
-           <option value="bb">Bruno Bevilaqua</option>
-         </select><br><br>
+					 <?php
+					 $cta = $consultaDesc->consultaFuncionario();
+					 ?>
+					 <option value="sel">Selecione</option>
+					 <?php
 
-         <a href="overview.php"><input type="submit" value="Enviar"></a>
+					 foreach ($cta as $key => $value) {
+						 ?>
+
+						 		<option name="funcionario"><?php echo $cta[$key]['nome_func'];?></option>
+
+						 <?php
+					 }
+					 ?>
+
+
+				 </select><br><br>
+
+         <input name="submit" type="submit" value="Enviar">
+				 </form>
+				 <?php
+	 			include_once "../../classes/consultaBanco.php";
+
+	 				if(isset($_POST['submit'])){
+						$lfunc = $_POST['chamado'];
+						$clchamado = $_POST['chamadoC'];
+						$consultaDesc->alterarClassificaoChamado($lfunc, $clchamado, $_GET['id']);
+						header("Location: http://localhost/trab-integrador/programacao-II/html/adm/overview.php");
+	 				}
+
+	 			?>
+
 
        </div>
 

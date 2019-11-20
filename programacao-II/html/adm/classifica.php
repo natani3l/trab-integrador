@@ -14,32 +14,32 @@
 
 		<?php include "../../includes-adm/top.php" ?>
 
+		<?php include "../../classes/consultaBanco.php" ?>
+
 		<div class="content">
-			<div class="chamado-nao-classificado">
-				<p>Titulo 1</p>
-				<p>Status</p>
-				<a href="classificarChamado.php"><input type="submit" value="Classificar chamado"></a>
-			</div>
 
-			<div class="chamado-nao-classificado">
-				<p>Titulo 2</p>
-				<p>Status</p>
-				<a href="classificarChamado.php"><input type="submit" value="Classificar chamado"></a>
-			</div>
+				<p>
+				<?php
+					$consulta = new consultaBanco();
+					$tes = $consulta->consultaClassifica();
 
-			<div class="chamado-nao-classificado">
-				<p>Titulo 3</p>
-				<p>Status</p>
-				<a href="classificarChamado.php"><input type="submit" value="Classificar chamado"></a>
-			</div>
+					foreach ($tes as $value => $v) {
+						?>
 
-			<div class="chamado-nao-classificado">
-				<p>Titulo 4</p>
-				<p>Status</p>
-				<a href="classificarChamado.php"><input type="submit" value="Classificar chamado"></a>
-			</div>
+						<div class="chamado-nao-classificado">
+									<a href="classificarChamado.php?id=<?=$tes[$value]['id_os'];?>">
+									<span>Titulo: </span>
+									<?php echo $tes[$value]['titulo_os'];?>
+									<br>
+									<span>Nome do cliente: </span>
+									<?php echo $tes[$value]['nome_client'];?>
+									<br>
+									<span>Nome da empresa: </span>
+									<?php echo $tes[$value]['nome_emp'];?>
+								</a>
+						</div>
 
-		</div>
+					<?php } ?>
 
 	</div>
 </body>
