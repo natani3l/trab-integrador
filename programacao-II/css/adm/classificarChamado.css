@@ -99,6 +99,7 @@ div{
 	background-color: #dddfde;
 	float: left;
 	padding: 50px;
+	overflow: auto;
 }
 
 input[type=submit]{

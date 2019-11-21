@@ -12,27 +12,30 @@
 	<div class="main">
 		<?php include "../../includes-adm/menu_left.php" ?>
 		<?php include "../../includes-adm/top.php" ?>
+		<?php include "../../classes/consultaBanco.php" ?>
 
 		<div class="content">
-			<div class="chamado">
-				<p>Titulo 1</p>
-				<p>Status</p>
-			</div>
+			<?php
+				$consulta = new consultaBanco();
+				$tes = $consulta->consultaMeuChamado($_SESSION['loginFunc']);
 
-			<div class="chamado">
-				<p>Titulo 2</p>
-				<p>Status</p>
-			</div>
+				foreach ($tes as $value => $v) {
+					?>
 
-			<div class="chamado">
-				<p>Titulo 3</p>
-				<p>Status</p>
-			</div>
+					<div class="chamado">
+							<a href="viewOS.php?id=<?=$tes[$value]['id_os'];?>">
+							<span>Titulo: </span>
+							<?php echo $tes[$value]['titulo_os'];?>
+							<br>
+							<span>Nome do cliente: </span>
+							<?php echo $tes[$value]['nome_client'];?>
+							<br>
+							<span>Nome da empresa: </span>
+							<?php echo $tes[$value]['nome_emp'];?>
+							</a>
+					</div>
 
-			<div class="chamado">
-				<p>Titulo 4</p>
-				<p>Status</p>
-			</div>
+				<?php } ?>
 		</div>
 
 	</div>

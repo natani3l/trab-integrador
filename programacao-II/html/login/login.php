@@ -47,8 +47,8 @@
 				}elseif ($dadosAdm[0]['login_func'] != "") {
 					session_start();
 
-					$_SESSION['nome'] = $dados[0]['nome_func'];
-					$_SESSION['loginFunc'] = $dados[0]['login_func'];
+					$_SESSION['nome'] = $dadosAdm[0]['nome_func'];
+					$_SESSION['loginFunc'] = $dadosAdm[0]['login_func'];
 					$_SESSION['autenticado'] = 1;
 
 					header("Location: http://localhost/trab-integrador/programacao-II/html/adm/overview.php");

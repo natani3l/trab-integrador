@@ -13,26 +13,33 @@
 	<div class="main">
 		<?php include "../../includes/menu_left.php"; ?>
 		<?php include "../../includes/top.php"?>
+		<?php include "../../classes/consultaBanco.php" ?>
+
 
 
 		<div class="content">
-			<div class="chamado">
-				<p>Titulo 1</p>
-				<p>Status</p>
-				<a href="viewOS.php"><input type="submit" value="+ Detalhes"></a>
-			</div>
+			<?php
+				$consulta = new consultaBanco();
+				$tes = $consulta->consultaChamadoCliente();
 
-			<div class="chamado-2">
-				<p>Titulo 2</p>
-				<p>Status</p>
-				<a href="viewOS.php"><input type="submit" value="+ Detalhes"></a>
-			</div>
+				foreach ($tes as $value => $v) {
+					?>
 
-			<div class="chamado-3">
-				<p>Titulo 3</p>
-				<p>Status</p>
-				<a href="viewOS.php"><input type="submit" value="+ Detalhes"></a>
-			</div>
+					<div class="chamado">
+								<a href="viewOS.php?id=<?=$tes[$value]['id_os'];?>">
+								<span>Titulo: </span>
+								<?php echo $tes[$value]['titulo_os'];?>
+								<br>
+								<span>Nome do responsável: </span>
+								<?php echo $tes[$value]['nome_func'];?>
+
+							</a>
+					</div>
+
+				<?php } ?>
+		</div>
+
+
 
 		</div>
 

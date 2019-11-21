@@ -14,7 +14,31 @@
 
 		<?php include "../../includes/menu_left.php"; ?>
 		<?php include "../../includes/top.php"?>
-		<?php include "../../includes/chamados_banco.php"?>
+		<?php include "../../classes/consultaBanco.php" ?>
+
+
+
+		<div class="content">
+			<?php
+				$consulta = new consultaBanco();
+				$tes = $consulta->consultaChamadoFechado($_SESSION['cnpj']);
+
+				foreach ($tes as $value => $v) {
+					?>
+
+					<div class="chamado">
+								<a href="viewOS.php?id=<?=$tes[$value]['id_os'];?>">
+								<span>Titulo: </span>
+								<?php echo $tes[$value]['titulo_os'];?>
+								<br>
+								<span>Nome do responsável: </span>
+								<?php echo $tes[$value]['nome_func'];?>
+
+							</a>
+					</div>
+
+				<?php } ?>
+
 
 		</div>
 

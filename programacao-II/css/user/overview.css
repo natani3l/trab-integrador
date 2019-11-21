@@ -91,6 +91,7 @@ a{
 	height: 650px;
 	background-color: #dddfde;
 	float: left;
+	overflow: auto;
 }
 
 .chamado{

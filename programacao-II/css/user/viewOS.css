@@ -77,6 +77,7 @@ a{
 	background-color: white;
 }
 
+
 .top{
 	width: 800px;
 	height: 50px;
@@ -92,6 +93,7 @@ a{
 	background-color: #dddfde;
 	float: left;
 	padding: 50px;
+	overflow: auto;
 }
 
 textarea{
@@ -123,6 +125,21 @@ input[type=text]{
 }
 
 input[type=button]{
+	width: 20%;
+	background-color: #1E90FF;
+	color: #FFFFFF;
+	padding: 15px 20px;
+	margin-left: 10%;
+  margin-right: 0px;
+	margin-top: 250px;
+	margin-bottom: 10px;
+	border-radius: 6px;
+	cursor: pointer;
+  border: none;
+  float: left;
+
+}
+input[type=submit]{
 	width: 20%;
 	background-color: #1E90FF;
 	color: #FFFFFF;

@@ -36,6 +36,42 @@ class consultaBanco{
     return $result;
   }
 
+  function consultaChamadoCliente(){
+    $sql = "SELECT os.id_os, os.titulo_os, f.nome_func FROM ordem_servico os NATURAL JOIN funcionario f WHERE os.sig_stat = 'EME'";
+    $result = $this->bd->select($sql);
+    return $result;
+  }
+
+  function preencheOS($id){
+    $sql = "SELECT os.abertura_os, os.sig_stat, os.prioridade_stat, msg.conteudo_msg FROM ordem_servico os JOIN mensagem msg ON msg.id_os = os.id_os WHERE msg.id_msg = '$id' ";
+    $result = $this->bd->select($sql);
+    return $result;
+  }
+
+  function encerarChamado($id){
+    $sql = "UPDATE ordem_servico SET sig_stat = 'FEC' WHERE ID_OS = '$id'";
+    $result = $this->bd->select($sql);
+    return $result;
+  }
+
+  function consultaChamadoFechado($cnpj){##ARRUMAR ERRO!!!!!!!!!!!!!
+    $sql = "SELECT os.id_os, os.titulo_os, f.nome_func FROM ordem_servico os NATURAL JOIN funcionario f NATURAL JOIN cliente c NATURAL JOIN empresa e WHERE os.sig_stat = 'FEC' AND e.cnpj_emp = '$cnpj';";
+    $result = $this->bd->select($sql);
+    return $result;
+  }
+
+  function consultaChamadoFechadoADM(){##ARRUMAR ERRO!!!!!!!!!!!!!
+    $sql = "SELECT os.id_os, os.titulo_os, f.nome_func FROM ordem_servico os NATURAL JOIN funcionario f NATURAL JOIN cliente c NATURAL JOIN empresa e WHERE os.sig_stat = 'FEC';";
+    $result = $this->bd->select($sql);
+    return $result;
+  }
+
+  function consultaMeuChamado($loginFun){
+    $sql = "SELECT os.titulo_os, os.id_os, client.nome_client, emp.nome_emp FROM ordem_servico os NATURAL JOIN cliente client NATURAL JOIN empresa emp WHERE os.login_func = '$loginFun' AND os.sig_stat = 'EME';";
+    $result = $this->bd->select($sql);
+    return $result;
+
+  }
 
 
 

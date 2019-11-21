@@ -12,8 +12,8 @@
 
 
 	<div class="main">
-		<?php include "../../includes/menu_left.php"; ?>
-		<?php include "../../includes/top.php"?>
+		<?php include "../../includes-adm/menu_left.php"; ?>
+		<?php include "../../includes-adm/top.php"?>
 		<?php include "../../classes/consultaBanco.php" ?>
 
 		<?php
@@ -38,16 +38,22 @@
 				<label for="msg-enviada">Descrição: </label><br>
 				<?php echo $retu[0]['conteudo_msg'] ?>
 				<br><br>
-				<a href="overview.php"><input type="button" value="Voltar"></a>
-				<a href="#"><input type="button" value="Gerar PDF"></a>
-				<input name="submit" type="submit" value="Encerrar chamado">
+				<input name="conversa" type="submit" value="Conversa">
+
+        <a href="#"><input type="button" value="Gerar PDF"></a>
+
+        <input name="submit" type="submit" value="Encerrar chamado">
 
 			</form>
 			<?php
 			if (isset($_POST['submit'])){
 				$preencherOs->encerarChamado($_GET['id']);
-				header("Location: http://localhost/trab-integrador/programacao-II/html/user/overview.php");
+				header("Location: http://localhost/trab-integrador/programacao-II/html/adm/overview.php");
 			}
+
+      if (isset($_POST['conversa'])){
+        header("Location: http://localhost/trab-integrador/programacao-II/html/adm/conversa.php");
+      }
 			?>
 		</div>
 
