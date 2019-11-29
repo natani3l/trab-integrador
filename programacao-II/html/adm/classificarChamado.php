@@ -19,8 +19,6 @@
 		<div class="content">
 	     <div class="chamado-OS">
 				 <form method="post">
-
-
 				 <?php
 						 include "../../classes/consultaBanco.php";
 						 $consultaDesc = new consultaBanco();
@@ -46,37 +44,48 @@
            <option value="alta">Alta</option>
          </select><br><br>
 
-
-
-
          <label for="chamado"><strong>Selecione o responsavel pelo atendimento:</strong></label><br>
-         <select name="chamado">
+
+				 <select name="chamado">
+
 					 <?php
-					 $cta = $consultaDesc->consultaFuncionario();
+					 		$cta = $consultaDesc->consultaFuncionario();
 					 ?>
+
 					 <option value="sel">Selecione</option>
+
 					 <?php
+					 		foreach ($cta as $key => $value) {
 
-					 foreach ($cta as $key => $value) {
-						 ?>
+							$teste = "nataiel";
 
-						 		<option name="funcionario"><?php echo $cta[$key]['nome_func'];?></option>
+							echo '<option value="'.$cta[$key]['login_func'].'">'.$cta[$key]['nome_func'].'</option>';
 
-						 <?php
-					 }
+					 		}
 					 ?>
 
 
 				 </select><br><br>
 
          <input name="submit" type="submit" value="Enviar">
-				 </form>
-				 <?php
-	 			include_once "../../classes/consultaBanco.php";
 
-	 				if(isset($_POST['submit'])){
+				 </form>
+
+
+				 <?php
+		 				include_once "../../classes/consultaBanco.php";
+
+		 				if(isset($_POST['submit'])){
+
+
+
 						$lfunc = $_POST['chamado'];
+
+					  echo $_POST['chamado'];
+
 						$clchamado = $_POST['chamadoC'];
+
+
 						$consultaDesc->alterarClassificaoChamado($lfunc, $clchamado, $_GET['id']);
 						header("Location: http://localhost/trab-integrador/programacao-II/html/adm/overview.php");
 	 				}

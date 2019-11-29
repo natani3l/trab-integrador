@@ -32,7 +32,7 @@ class consultaBanco{
 
   function alterarClassificaoChamado($func, $prd, $id){
     $sql = "UPDATE ordem_servico SET login_func = '$func', sig_stat = 'EME', prioridade_stat = '$prd' WHERE id_os = '$id'";
-    $result = $this->bd->select($sql);
+    $result = $this->bd->query($sql);
     return $result;
   }
 
@@ -43,7 +43,7 @@ class consultaBanco{
   }
 
   function preencheOS($id){
-    $sql = "SELECT os.abertura_os, os.sig_stat, os.prioridade_stat, msg.conteudo_msg FROM ordem_servico os JOIN mensagem msg ON msg.id_os = os.id_os WHERE msg.id_msg = '$id' ";
+    $sql = "SELECT os.abertura_os, os.sig_stat, os.prioridade_stat, msg.conteudo_msg FROM ordem_servico os JOIN mensagem msg ON msg.id_os = os.id_os WHERE os.id_os = '$id' ";
     $result = $this->bd->select($sql);
     return $result;
   }

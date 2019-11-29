@@ -13,11 +13,11 @@
       }
 
       function novoChamado(){
-
         $titulo = $_POST['titulo'];
         $descricao = $_POST['descricao'];
-        $dataAbertura = date("d/m/Y");
-        $dataMensagem = date("d/m/Y H:i:s");
+
+        $dataAbertura = date("Y/m/d");
+        $dataMensagem = date("Y-m-d H:i:s");
         $cliente = $_SESSION['loginClient'];
 
         $queryOS = "INSERT INTO ordem_servico (titulo_os, abertura_os, login_client, sig_stat) VALUES('$titulo', '$dataAbertura', '$cliente', 'EMA');";

@@ -38,7 +38,7 @@
 				<label for="msg-enviada">Descrição: </label><br>
 				<?php echo $retu[0]['conteudo_msg'] ?>
 				<br><br>
-				<a href="overview.php"><input type="button" value="Voltar"></a>
+				<a href="conversa.php?id=<?=$_GET['id'];?>"><input type="button" value="Conversa"></a>
 				<a href="#"><input type="button" value="Gerar PDF"></a>
 				<input name="submit" type="submit" value="Encerrar chamado">
 

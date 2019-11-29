@@ -17,6 +17,7 @@ div{
 a{
 	text-decoration:none;
 }
+
 .main{
 	width: 1000px;
 	height: 700px;
@@ -88,64 +89,59 @@ a{
 
 .content{
 	width: 800px;
-	height: 650px;
+	height: 450px;
 	background-color: #dddfde;
 	float: left;
+	padding: 50px;
 	overflow: auto;
 }
 
-.chamado{
-	width: 95%;
-	height: 120px;
-	margin: 20px;
-	border-radius: 20px;
-	background: #ffffff;
-	border-style: solid;
-	border-color: #ff0000;
-	padding: 10px;
-	text-align: left;
-}
-
-.chamado-2{
-	width: 95%;
-	height: 120px;
-	margin: 20px;
-	border-radius: 20px;
-	background: #ffffff;
-	border-style: solid;
-	border-color: #d0ff00;
-	padding: 10px;
-	text-align: left;
-}
-
-.chamado-3{
-	width: 95%;
-	height: 120px;
-	margin: 20px;
-	border-radius: 20px;
-	background: #ffffff;
-	border-style: solid;
-	border-color: #00ff45;
-	padding: 10px;
-	text-align: left;
-}
-
-.chamado .chamado-2 .chamado-3 p{
-	margin-top: 5px;
-	margin-left: 50px;
-}
+textarea{
+	width: 70%;
+	height: 150px;
+	margin: 0 auto;
+	padding: 12px 20px;
+	border: 2px solid #cccccc;
+	border-radius: 4px;
+	background-color: #f8f8f8;
+	transition: 0.5s;
+	font-size: 16px;
+	resize: none;
+	outline: none;
+  float: left;
+	}
 
 input[type=submit]{
-	width: 15%;
+	width: 20%;
 	background-color: #1E90FF;
 	color: #FFFFFF;
-	margin-top: 0px;
-	margin-left: 83%;
+	padding: 15px 20px;
 	border: none;
 	border-radius: 6px;
 	cursor: pointer;
+  float: left;
+  margin-left: 45px;
 }
 
-#nota{
-	text-align: center;
+.conversa{
+  width: 800px;
+  height: 200px;
+  padding: 10px;
+  padding-left: 40px;
+  background-color: #dddfde;
+  float: left;
+}
+
+.mensagemEsquerda{
+	color: blue;
+	width: 800px;
+  margin-top: 10px;
+  float: left;
+}
+
+.mensagemDireita{
+  width: 800px;
+  text-align: right;
+  margin-top: 10px;
+  float: right;
 }

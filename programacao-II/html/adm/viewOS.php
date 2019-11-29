@@ -38,7 +38,8 @@
 				<label for="msg-enviada">Descrição: </label><br>
 				<?php echo $retu[0]['conteudo_msg'] ?>
 				<br><br>
-				<input name="conversa" type="submit" value="Conversa">
+
+        <a href="conversa.php?id=<?=$_GET['id'];?>"><input type="button" value="Conversa"></a>
 
         <a href="#"><input type="button" value="Gerar PDF"></a>
 
