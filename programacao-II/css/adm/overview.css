@@ -17,8 +17,7 @@ input[type=submit]{
 	left: 68%;
 	border-radius: 6%;
 	cursor: pointer;
-  border: none;
-
+    border: none;
 }
 a{
 	text-decoration:none;
@@ -142,4 +141,8 @@ div{
 .chamado-nao-classificado p{
 	margin-top: 5px;
 	margin-left: 50px;
+}
+
+#nota{
+	text-align: center;
 }

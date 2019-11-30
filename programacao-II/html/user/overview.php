@@ -20,7 +20,7 @@
 		<div class="content">
 			<?php
 				$consulta = new consultaBanco();
-				$tes = $consulta->consultaChamadoCliente();
+				$tes = $consulta->consultaChamadoCliente($_SESSION['loginClient']);
 
 				if($tes == null){
 

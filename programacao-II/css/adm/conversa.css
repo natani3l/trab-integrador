@@ -93,7 +93,8 @@ a{
 	background-color: #dddfde;
 	float: left;
 	padding: 50px;
-	overflow: auto;
+	overflow: hidden;
+    overflow-y: auto;
 }
 
 textarea{
@@ -108,8 +109,8 @@ textarea{
 	font-size: 16px;
 	resize: none;
 	outline: none;
-  float: left;
-	}
+    float: left;
+}
 
 input[type=submit]{
 	width: 20%;
@@ -132,9 +133,26 @@ input[type=submit]{
   float: left;
 }
 
+.interiorEsquerda{
+	width: 40%;
+	background-color: #1E90FF;
+	border-radius: 10px;
+	color: #ffffff;
+	word-wrap: break-word;
+}
+
+.interiorDireita{
+	width: 40%;
+	background-color: #1E90FF;
+	border-radius: 10px;
+	color: #ffffff;
+	float: right;
+	word-wrap: break-word;
+}
+
 .mensagemEsquerda{
-	color: blue;
-	width: 800px;
+  color: blue;
+  width: 800px;
   margin-top: 10px;
   float: left;
 }

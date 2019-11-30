@@ -19,10 +19,16 @@
 				$consulta = new consultaBanco();
 				$tes = $consulta->consultaMeuChamado($_SESSION['loginFunc']);
 
-				foreach ($tes as $value => $v) {
-					?>
+				if($tes == null){
+			?>
+				<p id="nota"><?php echo "Nem um chamado em aberto encontrado!";?></p>
 
-					<div class="chamado">
+			<?php
+
+				} else {
+					foreach ($tes as $value => $v) {
+						?>
+						<div class="chamado">
 							<a href="viewOS.php?id=<?=$tes[$value]['id_os'];?>">
 							<span>Titulo: </span>
 							<?php echo $tes[$value]['titulo_os'];?>
@@ -33,11 +39,17 @@
 							<span>Nome da empresa: </span>
 							<?php echo $tes[$value]['nome_emp'];?>
 							</a>
-					</div>
+						</div>
+				<?php
+					}
+				}
 
-				<?php } ?>
+				?>
 		</div>
 
 	</div>
 </body>
 </html>
+
+
+					

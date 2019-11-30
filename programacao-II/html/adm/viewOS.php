@@ -47,14 +47,15 @@
 
 			</form>
 			<?php
-			if (isset($_POST['submit'])){
-				$preencherOs->encerarChamado($_GET['id']);
-				header("Location: http://localhost/trab-integrador/programacao-II/html/adm/overview.php");
-			}
+				if (isset($_POST['submit'])){
+					$preencherOs->encerarChamado($_GET['id']);
+					header("Location: http://localhost/trab-integrador/programacao-II/html/adm/overview.php");
+		
+				}
 
-      if (isset($_POST['conversa'])){
-        header("Location: http://localhost/trab-integrador/programacao-II/html/adm/conversa.php");
-      }
+			    if (isset($_POST['conversa'])){
+			    	header("Location: http://localhost/trab-integrador/programacao-II/html/adm/conversa.php");
+			    }
 			?>
 		</div>
 

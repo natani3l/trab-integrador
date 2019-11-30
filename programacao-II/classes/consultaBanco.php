@@ -36,8 +36,8 @@ class consultaBanco{
     return $result;
   }
 
-  function consultaChamadoCliente(){
-    $sql = "SELECT os.id_os, os.titulo_os, f.nome_func FROM ordem_servico os NATURAL JOIN funcionario f WHERE os.sig_stat = 'EME'";
+  function consultaChamadoCliente($id){
+    $sql = "SELECT os.id_os, os.titulo_os, f.nome_func FROM ordem_servico os NATURAL JOIN funcionario f WHERE os.sig_stat = 'EME' AND os.login_client = '$id'";
     $result = $this->bd->select($sql);
     return $result;
   }

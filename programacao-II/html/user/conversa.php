@@ -25,14 +25,18 @@
               if($resultado[$value]['tipo_msg'] == 0){
               ?>
                 <div class="mensagemEsquerda">
-                    <?php echo $resultado[$value]['conteudo_msg']; ?>
+                    <div class="interiorEsquerda">
+                        <p><?php echo $resultado[$value]['conteudo_msg']; ?></p>
+                    </div>  
                 </div>
 
-    		    <?php
+            <?php
               } else {
             ?>
                 <div class="mensagemDireita">
-                    <?php echo $resultado[$value]['conteudo_msg']; ?>
+                    <div class="interiorDireita">
+                        <p><?php echo $resultado[$value]['conteudo_msg']; ?></p>
+                    </div>  
                 </div>
 
           <?php

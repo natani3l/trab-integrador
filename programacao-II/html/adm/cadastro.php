@@ -59,6 +59,8 @@
 					$tes = new userCadastro();
 
 					$tes->insertValues();
+
+					echo "<script>alert('Usuario Cadastrado Com Sucesso!');</script>";
 				}
 
 			?>
