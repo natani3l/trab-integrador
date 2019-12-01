@@ -37,7 +37,7 @@ class consultaBanco{
   }
 
   function consultaChamadoCliente($id){
-    $sql = "SELECT os.id_os, os.titulo_os, f.nome_func FROM ordem_servico os NATURAL JOIN funcionario f WHERE os.sig_stat = 'EME' AND os.login_client = '$id'";
+    $sql = "SELECT os.id_os, os.titulo_os, f.nome_func, os.prioridade_stat FROM ordem_servico os NATURAL JOIN funcionario f WHERE os.sig_stat = 'EME' AND os.login_client = '$id'";
     $result = $this->bd->select($sql);
     return $result;
   }
@@ -55,19 +55,19 @@ class consultaBanco{
   }
 
   function consultaChamadoFechado($cnpj){##ARRUMAR ERRO!!!!!!!!!!!!!
-    $sql = "SELECT os.id_os, os.titulo_os, f.nome_func FROM ordem_servico os NATURAL JOIN funcionario f NATURAL JOIN cliente c NATURAL JOIN empresa e WHERE os.sig_stat = 'FEC' AND e.cnpj_emp = '$cnpj';";
+    $sql = "SELECT os.id_os, os.titulo_os, f.nome_func, os.prioridade_stat FROM ordem_servico os NATURAL JOIN funcionario f NATURAL JOIN cliente c NATURAL JOIN empresa e WHERE os.sig_stat = 'FEC' AND e.cnpj_emp = '$cnpj';";
     $result = $this->bd->select($sql);
     return $result;
   }
 
   function consultaChamadoFechadoADM(){##ARRUMAR ERRO!!!!!!!!!!!!!
-    $sql = "SELECT os.id_os, os.titulo_os, f.nome_func FROM ordem_servico os NATURAL JOIN funcionario f NATURAL JOIN cliente c NATURAL JOIN empresa e WHERE os.sig_stat = 'FEC';";
+    $sql = "SELECT os.titulo_os, os.id_os, client.nome_client, emp.nome_emp, os.prioridade_stat FROM ordem_servico os NATURAL JOIN cliente client NATURAL JOIN empresa emp WHERE os.sig_stat = 'FEC';";
     $result = $this->bd->select($sql);
     return $result;
   }
 
   function consultaMeuChamado($loginFun){
-    $sql = "SELECT os.titulo_os, os.id_os, client.nome_client, emp.nome_emp FROM ordem_servico os NATURAL JOIN cliente client NATURAL JOIN empresa emp WHERE os.login_func = '$loginFun' AND os.sig_stat = 'EME';";
+    $sql = "SELECT os.titulo_os, os.id_os, client.nome_client, emp.nome_emp, os.prioridade_stat FROM ordem_servico os NATURAL JOIN cliente client NATURAL JOIN empresa emp WHERE os.login_func = '$loginFun' AND os.sig_stat = 'EME';";
     $result = $this->bd->select($sql);
     return $result;
 

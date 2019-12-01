@@ -31,9 +31,23 @@
 
 				} else {
 					foreach ($tes as $value => $v) {
+						$cor = ""; 
+
+						if($tes[$value]['prioridade_stat'] == "baixa"){
+							$cor = "prioridade-baixa";
+						} 
+
+						elseif($tes[$value]['prioridade_stat'] == "media"){
+							$cor = "prioridade-media";
+						}
+
+						elseif($tes[$value]['prioridade_stat'] == "alta"){
+							$cor = "prioridade-alta";
+						}
+
 						?>
 
-						<div class="chamado">
+						<div class='<?php echo $cor ?>'>
 									<a href="viewOS.php?id=<?=$tes[$value]['id_os'];?>">
 									<span>Titulo: </span>
 									<?php echo $tes[$value]['titulo_os'];?>

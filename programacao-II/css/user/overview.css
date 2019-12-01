@@ -94,43 +94,43 @@ a{
 	overflow: auto;
 }
 
-.chamado{
+.prioridade-baixa{
 	width: 95%;
 	height: 120px;
 	margin: 20px;
-	border-radius: 20px;
+	border-radius: 30px;
 	background: #ffffff;
 	border-style: solid;
-	border-color: #ff0000;
+	border-color: #008000;
 	padding: 10px;
 	text-align: left;
 }
 
-.chamado-2{
+.prioridade-media{
 	width: 95%;
 	height: 120px;
 	margin: 20px;
-	border-radius: 20px;
+	border-radius: 30px;
 	background: #ffffff;
 	border-style: solid;
-	border-color: #d0ff00;
+	border-color: #FFFF00;
 	padding: 10px;
 	text-align: left;
 }
 
-.chamado-3{
+.prioridade-alta{
 	width: 95%;
 	height: 120px;
 	margin: 20px;
-	border-radius: 20px;
+	border-radius: 30px;
 	background: #ffffff;
 	border-style: solid;
-	border-color: #00ff45;
+	border-color: #FF0000;
 	padding: 10px;
 	text-align: left;
 }
 
-.chamado .chamado-2 .chamado-3 p{
+.prioridade-baixa .prioridade-media .prioridade-alta p{
 	margin-top: 5px;
 	margin-left: 50px;
 }

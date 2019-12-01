@@ -122,22 +122,47 @@ div{
 
 }
 
-.chamado{
+.prioridade-baixa{
 	width: 95%;
-	height: 100px;
+	height: 120px;
 	margin: 20px;
-	position: relative;
 	border-radius: 30px;
 	background: #ffffff;
+	border-style: solid;
+	border-color: #008000;
 	padding: 10px;
-	border: solid;
-	border-color: #ff0000;
+	text-align: left;
 }
 
-.chamado p{
+.prioridade-media{
+	width: 95%;
+	height: 120px;
+	margin: 20px;
+	border-radius: 30px;
+	background: #ffffff;
+	border-style: solid;
+	border-color: #FFFF00;
+	padding: 10px;
+	text-align: left;
+}
+
+.prioridade-alta{
+	width: 95%;
+	height: 120px;
+	margin: 20px;
+	border-radius: 30px;
+	background: #ffffff;
+	border-style: solid;
+	border-color: #FF0000;
+	padding: 10px;
+	text-align: left;
+}
+
+.prioridade-baixa .prioridade-media .prioridade-alta p{
 	margin-top: 5px;
 	margin-left: 50px;
 }
+
 .chamado-nao-classificado p{
 	margin-top: 5px;
 	margin-left: 50px;
