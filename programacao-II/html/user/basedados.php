@@ -11,11 +11,12 @@
 <body>
 
 	<div class="main">
-
 		<?php include "../../includes/menu_left.php"; ?>
-		<?php include "../../includes/top.php"?>
-		<?php include "../../classes/consultaBanco.php" ?>
+		<?php include "../../classes/consultaBanco.php"; ?>
 
+		<div class="top">
+		  <p>Base de dados/Chamados encerrados</p>
+		</div>
 
 
 		<div class="content">
@@ -24,11 +25,11 @@
 				$tes = $consulta->consultaChamadoFechado($_SESSION['cnpj']);
 
 				foreach ($tes as $value => $v) {
-					$cor = ""; 
+					$cor = "";
 
 					if($tes[$value]['prioridade_stat'] == "baixa"){
 						$cor = "prioridade-baixa";
-					} 
+					}
 
 					elseif($tes[$value]['prioridade_stat'] == "media"){
 						$cor = "prioridade-media";

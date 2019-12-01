@@ -12,9 +12,14 @@
 
 
 	<div class="main">
-		<?php include "../../includes-adm/menu_left.php"; ?>
-		<?php include "../../includes-adm/top.php"?>
-		<?php include "../../classes/consultaBanco.php" ?>
+		<?php
+		include "../../includes-adm/menu_left.php";
+		include "../../classes/consultaBanco.php"
+		?>
+
+		<div class="top">
+			<p>Informações da Ordem de Serviço</p>
+		</div>
 
 		<?php
 		$preencherOs = new consultaBanco();
@@ -50,7 +55,7 @@
 				if (isset($_POST['submit'])){
 					$preencherOs->encerarChamado($_GET['id']);
 					header("Location: http://localhost/trab-integrador/programacao-II/html/adm/overview.php");
-		
+
 				}
 
 			    if (isset($_POST['conversa'])){

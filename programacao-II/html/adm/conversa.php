@@ -10,11 +10,17 @@
 </head>
 <body>
 	<div class="main">
-		<?php include "../../includes-adm/menu_left.php" ?>
-		<?php include "../../includes-adm/top.php" ?>
-		<?php include "../../classes/consultaBanco.php" ?>
-    <?php include "../../classes/mensagem.php" ?>
-    <div class="content">
+		<?php
+		include "../../includes-adm/menu_left.php";
+		include "../../classes/consultaBanco.php";
+    include "../../classes/mensagem.php"
+		?>
+
+		<div class="top">
+			<p>Conversa referente ao chamado <?php echo $_GET['id'];?></p>
+		</div>
+
+	  <div class="content">
         <?php
             $mensagem = new mensagem();
 
@@ -27,7 +33,7 @@
                 <div class="mensagemDireita">
                     <div class="interiorDireita">
                         <p><?php echo $resultado[$value]['conteudo_msg']; ?></p>
-                    </div>  
+                    </div>
                 </div>
 
             <?php
@@ -36,7 +42,7 @@
                 <div class="mensagemEsquerda">
                     <div class="interiorEsquerda">
                         <p><?php echo $resultado[$value]['conteudo_msg']; ?></p>
-                    </div>  
+                    </div>
                 </div>
 
           <?php

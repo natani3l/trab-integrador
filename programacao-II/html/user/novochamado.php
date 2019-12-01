@@ -13,7 +13,9 @@
 
 	<div class="main">
 		<?php include "../../includes/menu_left.php"; ?>
-		<?php include "../../includes/top.php"?>
+		<div class="top">
+			<p>Abrir novo chamado</p>
+		</div>
 
 		<div class="content">
 			<form method="post">
@@ -32,7 +34,7 @@
 
 			<?php
 			include_once "../../classes/abrirChamado.php";
-			
+
 				if(isset($_POST['submit'])){
 					$aux = new abrirChamado();
 					$aux->novoChamado();

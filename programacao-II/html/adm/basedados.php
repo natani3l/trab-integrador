@@ -14,10 +14,12 @@
 
 		<?php
 				include "../../includes-adm/menu_left.php";
-				include "../../includes-adm/top.php";
 				include "../../classes/consultaBanco.php";
 		?>
 
+		<div class="top">
+			<p>Base de dados/Chamados encerrados</p>
+		</div>
 
 
 		<div class="content">
@@ -26,11 +28,11 @@
 				$tes = $consulta->consultaChamadoFechadoADM();
 
 				foreach ($tes as $value => $v) {
-					$cor = ""; 
+					$cor = "";
 
 						if($tes[$value]['prioridade_stat'] == "baixa"){
 							$cor = "prioridade-baixa";
-						} 
+						}
 
 						elseif($tes[$value]['prioridade_stat'] == "media"){
 							$cor = "prioridade-media";

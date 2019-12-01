@@ -12,10 +12,13 @@
 	<div class="main">
 		<?php
 		include "../../includes-adm/menu_left.php";
-		include "../../includes-adm/top.php";
 		include "../../classes/BD.php";
 
 		?>
+
+		<div class="top">
+			<p>Cadastrar novo usuário</p>
+		</div>
 		<div class="content">
 			<form method="POST" id="form-1">
 				<!-- <label for="empresa">Empresa</label><br>

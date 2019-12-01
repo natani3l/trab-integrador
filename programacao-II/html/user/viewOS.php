@@ -13,8 +13,11 @@
 
 	<div class="main">
 		<?php include "../../includes/menu_left.php"; ?>
-		<?php include "../../includes/top.php"?>
 		<?php include "../../classes/consultaBanco.php" ?>
+
+		<div class="top">
+			<p>Informações da Ordem de Serviço</p>
+		</div>
 
 		<?php
 		$preencherOs = new consultaBanco();

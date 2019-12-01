@@ -10,9 +10,14 @@
 </head>
 <body>
 	<div class="main">
-		<?php include "../../includes-adm/menu_left.php" ?>
-		<?php include "../../includes-adm/top.php" ?>
-		<?php include "../../classes/consultaBanco.php" ?>
+		<?php
+		include "../../includes-adm/menu_left.php";
+		include "../../classes/consultaBanco.php";
+		?>
+
+		<div class="top">
+			<p>Tela inicial</p>
+		</div>
 
 		<div class="content">
 			<?php
@@ -27,11 +32,11 @@
 
 				} else {
 					foreach ($tes as $value => $v) {
-						$cor = ""; 
+						$cor = "";
 
 						if($tes[$value]['prioridade_stat'] == "baixa"){
 							$cor = "prioridade-baixa";
-						} 
+						}
 
 						elseif($tes[$value]['prioridade_stat'] == "media"){
 							$cor = "prioridade-media";

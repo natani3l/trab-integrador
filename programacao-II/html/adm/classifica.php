@@ -10,11 +10,14 @@
 </head>
 <body>
 	<div class="main">
-		<?php include "../../includes-adm/menu_left.php" ?>
+		<?php
+		include "../../includes-adm/menu_left.php";
+		include "../../classes/consultaBanco.php";
+		?>
 
-		<?php include "../../includes-adm/top.php" ?>
-
-		<?php include "../../classes/consultaBanco.php" ?>
+		<div class="top">
+			<p>Chamados não classificados</p>
+		</div>
 
 		<div class="content">
 

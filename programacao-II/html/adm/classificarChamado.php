@@ -10,10 +10,13 @@
 </head>
 <body>
 	<div class="main">
-		<?php include "../../includes-adm/menu_left.php" ?>
+		<?php
+		 include "../../includes-adm/menu_left.php";
+		 ?>
 
-		<?php include "../../includes-adm/top.php" ?>
-
+		 <div class="top">
+			 <p>Classificar chamado <?php echo $_GET['id'];?></p>
+		 </div>
 
 
 		<div class="content">
