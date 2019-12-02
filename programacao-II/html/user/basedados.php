@@ -42,7 +42,7 @@
 					?>
 
 					<div class='<?php echo $cor ?>'>
-						<a href="viewOS.php?id=<?=$tes[$value]['id_os'];?>">
+						<a href="viewOSEnc.php?id=<?=$tes[$value]['id_os'];?>">
 						<span>Titulo: </span>
 						<?php echo $tes[$value]['titulo_os'];?>
 						<br>

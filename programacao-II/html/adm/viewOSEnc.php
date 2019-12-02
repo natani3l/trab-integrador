@@ -44,25 +44,15 @@
 				<?php echo $retu[0]['conteudo_msg'] ?>
 				<br><br>
 
-        <a href="conversa.php?id=<?=$_GET['id'];?>"><input type="button" value="Conversa"></a>
+        <a href="conversaEnc.php?id=<?=$_GET['id'];?>"><input type="button" value="Conversa"></a>
 
         <a href="#"><input type="button" value="Gerar PDF"></a>
 
-        <input name="submit" type="submit" value="Encerrar chamado">
 
 			</form>
-			<?php
-				if (isset($_POST['submit'])){
-					$preencherOs->encerarChamado($_GET['id']);
-					header("Location: http://localhost/trab-integrador/programacao-II/html/adm/overview.php");
 
-				}
 
-			    if (isset($_POST['conversa'])){
-			    	header("Location: http://localhost/trab-integrador/programacao-II/html/adm/conversa.php");
-			    }
-					
-			?>
+
 		</div>
 
 

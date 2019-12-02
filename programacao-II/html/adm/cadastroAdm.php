@@ -20,7 +20,7 @@
 		</div>
 
     <div class="content">
-			<form method="POST" id="form-1">
+			<form method="POST" id="form-2">
 
         <label for="empresa">Setor</label><br>
         <select name="empresa">
@@ -32,7 +32,7 @@
 
 				<label for="titulo">Nome</label><br>
 				<input type="text" id="nome" name="nome"><br>
-				<span class="msg-erro" id="msg-cnpj"></span>
+				<span class="msg-erro" id="msg-nome"></span>
 
 				<label for="titulo">Email</label><br>
 				<input type="text" name="email" id="email" placeholder="nome@dominio"><br>
@@ -67,6 +67,6 @@
 
 	</div>
 
-<script src="../../js/cadastro.js"></script>
+<script src="../../js/cadastroAdm.js"></script>
 </body>
 </html>

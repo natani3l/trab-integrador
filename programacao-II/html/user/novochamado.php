@@ -37,7 +37,11 @@
 
 				if(isset($_POST['submit'])){
 					$aux = new abrirChamado();
-					$aux->novoChamado();
+					if (!empty($_POST['titulo']) and !empty($_POST['descricao'])){
+						$aux->novoChamado();
+					}else{
+						echo "Por favor preencha o campo Titulo e o Problema!";
+					}
 				}
 
 			?>

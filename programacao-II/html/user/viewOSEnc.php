@@ -12,10 +12,8 @@
 
 
 	<div class="main">
-		<?php
-		include "../../includes-adm/menu_left.php";
-		include "../../classes/consultaBanco.php"
-		?>
+		<?php include "../../includes/menu_left.php"; ?>
+		<?php include "../../classes/consultaBanco.php" ?>
 
 		<div class="top">
 			<p>Informações da Ordem de Serviço</p>
@@ -43,26 +41,10 @@
 				<label for="msg-enviada">Descrição: </label><br>
 				<?php echo $retu[0]['conteudo_msg'] ?>
 				<br><br>
-
-        <a href="conversa.php?id=<?=$_GET['id'];?>"><input type="button" value="Conversa"></a>
-
-        <a href="#"><input type="button" value="Gerar PDF"></a>
-
-        <input name="submit" type="submit" value="Encerrar chamado">
+				<a href="conversaEnc.php?id=<?=$_GET['id'];?>"><input type="button" value="Conversa"></a>
+				<a href="#"><input type="button" value="Gerar PDF"></a>
 
 			</form>
-			<?php
-				if (isset($_POST['submit'])){
-					$preencherOs->encerarChamado($_GET['id']);
-					header("Location: http://localhost/trab-integrador/programacao-II/html/adm/overview.php");
-
-				}
-
-			    if (isset($_POST['conversa'])){
-			    	header("Location: http://localhost/trab-integrador/programacao-II/html/adm/conversa.php");
-			    }
-					
-			?>
 		</div>
 
 

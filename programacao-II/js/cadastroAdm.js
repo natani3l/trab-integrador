@@ -1,4 +1,4 @@
-document.getElementById("form-1").onsubmit = validaCadastro;
+document.getElementById("form-2").onsubmit = validaCadastro;
 
 function mostraErro(idErro, mensagem){
 	idErro.style.display = "block";
@@ -9,18 +9,16 @@ function mostraErro(idErro, mensagem){
 function ocultaErro(idErro){
 	idErro.style.display = "none";
 }
-
 function validaCadastro(){
   contErros = 0;
-
-  campo = document.getElementById("cnpj");
-  erro = document.getElementById("msg-cnpj");
-  if ((campo.value == "") || (campo.value.length < 11)) {
-    mostraErro(erro, "Preencha o campo CNPJ corretamente!")
-  }else{
+  campo = document.getElementById("nome");
+  erro = document.getElementById("msg-nome");
+  if(campo.value == ""){
+    mostraErro(erro, "Por favor digite um nome");
+    }
+  else{
     ocultaErro(erro);
   }
-
 
   campo = document.getElementById("email");
 	erro = document.getElementById("msg-email");
@@ -32,25 +30,33 @@ function validaCadastro(){
   }
 
   campo = document.getElementById("login");
-  erro = document.getElementById("msg-login");
-  if (campo.value.length < 5) {
+	erro = document.getElementById("msg-login");
+	if(campo.value == ""){
+		mostraErro(erro, "Por favor digite um login");
+  }else if (campo.value.length < 6) {
     mostraErro(erro, "Login precisa ter 6 caracteres ou mais");
-  }else{
-    ocultaErro(erro);
   }
+	else{
+		ocultaErro(erro);
+  }
+
 
   campo = document.getElementById("password");
   campoDois = document.getElementById("passwordconf");
   erro = document.getElementById("msg-senhaConfirma");
-
+  erroSenha = document.getElementById("msg-senha");
   if (campo.value != campoDois.value){
     mostraErro(erro, "Senhas diferentes!")
   }else if (campo.value.length < 6) {
-  	mostraErro(erro, "Campo senha com menos de 6 caracteres");
+    mostraErro(erroSenha, "Campo senha com menos de 6 caracteres");
   }else{
     ocultaErro(erro);
   }
 
-  if(contErros > 0)
+  if(contErros > 0){
     return false;
+  }
+
+
+
 }
